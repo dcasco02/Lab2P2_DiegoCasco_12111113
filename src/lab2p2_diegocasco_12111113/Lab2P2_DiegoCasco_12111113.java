@@ -132,7 +132,16 @@ public class Lab2P2_DiegoCasco_12111113 {
                         JOptionPane.showMessageDialog(null, "Elemento eliminado exitosamente");
                     }
                 }
-            }    
+            }
+            if (opcion == 12 ){
+                String salida = "";
+                int pos = Integer.parseInt(
+                        JOptionPane.showInputDialog("posicion a imprimir"));
+
+                if (pos < animales.size()){
+                    System.out.println(animales.get(pos));
+                }
+            }
         }
 
     }
