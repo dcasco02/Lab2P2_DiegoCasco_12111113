@@ -27,9 +27,9 @@ public class Lab2P2_DiegoCasco_12111113 {
                             + "3- agregar nombre comun\n"
                             + "4- agregar habitat\n"
                             + "5- agregar alimentacion\n"
-                            + "6- agregar distribucion geografica\n"
-                            + "7- agregar profesor\n"
-                            + "8- agregar Celulares\n"
+                            + "6- agregar distribucion rasgos\n"
+                            + "7- Agregar Distribucion geografica \n"
+                            + "8- Imprimir\n"
                             + "9- editar todo\n"
                             + "10- eliminar\n"
                             + "11- salida"));
