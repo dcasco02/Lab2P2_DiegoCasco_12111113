@@ -25,9 +25,9 @@ public class Lab2P2_DiegoCasco_12111113 {
                     JOptionPane.showInputDialog("1- agregar edad\n"
                             + "2- agregar nombrescientifico\n"
                             + "3- agregar nombre comun\n"
-                            + "4- modificar pizarra\n"
-                            + "5- eliminar pizarrra\n"
-                            + "6- \n"
+                            + "4- agregar habitat\n"
+                            + "5- agregar alimentacion\n"
+                            + "6- agregar distribucion geografica\n"
                             + "7- agregar profesor\n"
                             + "8- agregar Celulares\n"
                             + "9- "));
@@ -47,38 +47,66 @@ public class Lab2P2_DiegoCasco_12111113 {
                 }
 
             }
-            if (opcion==3){
-               int pos = Integer.parseInt(
+            if (opcion == 3) {
+                int pos = Integer.parseInt(
                         JOptionPane.showInputDialog("posicion animales a agregar nombrescientifico"));
                 if (pos < animales.size()) {
                     if (animales.get(pos) instanceof Animales) {
                         String nombrecomun = JOptionPane.showInputDialog("nombre comun");
                         ((Animales) animales.get(pos)).getnombrecomun().add(nombrecomun);
                     }
-                } 
+                }
             }
-            if (opcion==4){
-               int pos = Integer.parseInt(
+            if (opcion == 4) {
+                int pos = Integer.parseInt(
                         JOptionPane.showInputDialog("posicion animales a agregar nombrescientifico"));
                 if (pos < animales.size()) {
                     if (animales.get(pos) instanceof Animales) {
                         String habitat = JOptionPane.showInputDialog("nombre comun");
                         ((Animales) animales.get(pos)).gethabitat().add(habitat);
                     }
-                } 
+                }
             }
-            if (opcion==5){
-               int pos = Integer.parseInt(
+            if (opcion == 5) {
+                int pos = Integer.parseInt(
                         JOptionPane.showInputDialog("posicion animales a agregar nombrescientifico"));
                 if (pos < animales.size()) {
                     if (animales.get(pos) instanceof Animales) {
                         String alimentacion = JOptionPane.showInputDialog("nombre comun");
                         ((Animales) animales.get(pos)).getalimentacion().add(alimentacion);
                     }
-                } 
+                }
             }
-            
-            
+            if (opcion == 6) {
+                int pos = Integer.parseInt(
+                        JOptionPane.showInputDialog("posicion animales a agregar nombrescientifico"));
+                if (pos < animales.size()) {
+                    if (animales.get(pos) instanceof Animales) {
+                        String rasgos = JOptionPane.showInputDialog("nombre comun");
+                        ((Animales) animales.get(pos)).getrasgos().add(rasgos);
+                    }
+                }
+            }
+            if (opcion == 7) {
+                int pos = Integer.parseInt(
+                        JOptionPane.showInputDialog("posicion animales a agregar nombrescientifico"));
+                if (pos < animales.size()) {
+                    if (animales.get(pos) instanceof Animales) {
+                        String distribuciongeo = JOptionPane.showInputDialog("nombre comun");
+                        ((Animales) animales.get(pos)).getgeo().add(distribuciongeo);
+                    }
+                }
+            }
+            if (opcion == 8) {
+                String salida = "";
+                for (Object temp : animales) {
+                    if (temp instanceof Animales) {
+                        salida += "" + animales.indexOf(temp) + " -" + temp+ "\n";
+                    }
+                }
+                JOptionPane.showMessageDialog(null, salida);
+            }
+
         }
 
     }
