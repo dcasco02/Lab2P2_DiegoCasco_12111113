@@ -5,6 +5,8 @@
  */
 package lab2p2_diegocasco_12111113;
 
+import java.util.ArrayList;
+
 
 /**
  *
@@ -12,17 +14,17 @@ package lab2p2_diegocasco_12111113;
  */
 public class Animales {
     private int edad;
-    private String nombrescientifico;
+     private ArrayList<String> nombrescientifico = new ArrayList();
+     private ArrayList<String> nombrecomun = new ArrayList();
     
-   public Animales{
+   public Animales(){
    } 
    public Animales(int l) {
         setedad(l);
     }
 
-   public Animales(int 1,String nombrescientifico){
+   public Animales(int l,String nombrescientifico){
        setedad(1);
-       this.nombrescientifico=nombrescientifico;
        
    }
    public void setedad(int l) {
@@ -33,11 +35,18 @@ public class Animales {
    public int getedad() {
         return edad;
     }
-   public void setnombrescientifico(String t) {
+   public void setnombrescientifico(ArrayList<String> n) {
         nombrescientifico = n;
     }
 
-    public String nombrescientifico() {
+    public ArrayList<String> getnombrescientifico() {
         return nombrescientifico;
+    }
+    public void setnombrecomun(ArrayList<String> c){
+        nombrecomun =c;
+        
+    }
+    public ArrayList<String> getnombrescomun() {
+        return nombrecomun;
     }
 }
