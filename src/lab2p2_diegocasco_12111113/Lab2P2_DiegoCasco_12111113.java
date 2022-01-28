@@ -30,7 +30,8 @@ public class Lab2P2_DiegoCasco_12111113 {
                             + "6- agregar distribucion geografica\n"
                             + "7- agregar profesor\n"
                             + "8- agregar Celulares\n"
-                            + "9- "));
+                            + "9- editar todo\n"
+                            + "10- eliminar"));
             if (opcion == 1) {
                 int l = Integer.parseInt(
                         JOptionPane.showInputDialog("ingrese vida"));
@@ -106,7 +107,31 @@ public class Lab2P2_DiegoCasco_12111113 {
                 }
                 JOptionPane.showMessageDialog(null, salida);
             }
+            if (opcion == 9) {
+                int pos = Integer.parseInt(
+                        JOptionPane.showInputDialog("posicion a modificar"));
 
+                if (pos < animales.size()) {
+                    if (animales.get(pos) instanceof Animales) {
+                        int l = Integer.parseInt(
+                                JOptionPane.showInputDialog("ingrese el nuevo largo"));
+                        ((Animales) animales.get(pos)).setedad(l);
+                        String distribuciongeo = JOptionPane.showInputDialog("nombre comun");
+                        //((Animales)animales.get(pos)).setgeo(distribuciongeo);
+                        
+                    }
+                }
+            }
+            if (opcion == 10) {
+                int pos = Integer.parseInt(
+                        JOptionPane.showInputDialog("posicion a eliminar"));
+                if (pos < animales.size()) {
+                    if (animales.get(pos) instanceof Animales) {
+                        animales.remove(pos);
+                        JOptionPane.showMessageDialog(null, "Elemento eliminado exitosamente");
+                    }
+                }
+            }    
         }
 
     }
