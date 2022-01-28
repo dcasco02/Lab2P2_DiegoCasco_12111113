@@ -20,7 +20,7 @@ public class Lab2P2_DiegoCasco_12111113 {
     public static void main(String[] args) {
         ArrayList animales = new ArrayList();
         int opcion = 0;
-        while (opcion != 6) {
+        while (opcion != 11) {
             opcion = Integer.parseInt(
                     JOptionPane.showInputDialog("1- agregar edad\n"
                             + "2- agregar nombrescientifico\n"
@@ -31,7 +31,8 @@ public class Lab2P2_DiegoCasco_12111113 {
                             + "7- agregar profesor\n"
                             + "8- agregar Celulares\n"
                             + "9- editar todo\n"
-                            + "10- eliminar"));
+                            + "10- eliminar\n"
+                            + "11- salida"));
             if (opcion == 1) {
                 int l = Integer.parseInt(
                         JOptionPane.showInputDialog("ingrese vida"));
