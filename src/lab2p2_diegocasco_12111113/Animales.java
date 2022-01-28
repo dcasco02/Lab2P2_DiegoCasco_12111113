@@ -16,6 +16,8 @@ public class Animales {
     private int edad;
      private ArrayList<String> nombrescientifico = new ArrayList();
      private ArrayList<String> nombrecomun = new ArrayList();
+     private ArrayList <String> habitat=new ArrayList();
+     private ArrayList<String> alimentacion = new ArrayList();
     
    public Animales(){
    } 
@@ -28,8 +30,10 @@ public class Animales {
        
    }
    public void setedad(int l) {
-        if (1 > 0 ) {
+        if (0 <=1 ) {
             edad = l;
+        }else{
+            System.out.println("Invalido");
         }
     }
    public int getedad() {
@@ -46,7 +50,21 @@ public class Animales {
         nombrecomun =c;
         
     }
-    public ArrayList<String> getnombrescomun() {
+    public ArrayList<String> getnombrecomun() {
         return nombrecomun;
+    }
+    public void sethabitat(ArrayList<String> h){
+        habitat =h;
+        
+    }
+    public ArrayList<String> gethabitat() {
+        return habitat;
+    }
+    public void setalimentacion(ArrayList<String> a){
+        alimentacion =a;
+        
+    }
+    public ArrayList<String> getalimentacion() {
+        return alimentacion;
     }
 }

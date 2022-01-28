@@ -24,16 +24,16 @@ public class Lab2P2_DiegoCasco_12111113 {
             opcion = Integer.parseInt(
                     JOptionPane.showInputDialog("1- agregar edad\n"
                             + "2- agregar nombrescientifico\n"
-                            + "3- listar pizarras\n"
+                            + "3- agregar nombre comun\n"
                             + "4- modificar pizarra\n"
                             + "5- eliminar pizarrra\n"
-                            + "6- salir\n"
+                            + "6- \n"
                             + "7- agregar profesor\n"
                             + "8- agregar Celulares\n"
                             + "9- "));
             if (opcion == 1) {
                 int l = Integer.parseInt(
-                        JOptionPane.showInputDialog("ingrese largo"));
+                        JOptionPane.showInputDialog("ingrese vida"));
                 animales.add(new Animales(l));
             }
             if (opcion == 2) {
@@ -53,10 +53,32 @@ public class Lab2P2_DiegoCasco_12111113 {
                 if (pos < animales.size()) {
                     if (animales.get(pos) instanceof Animales) {
                         String nombrecomun = JOptionPane.showInputDialog("nombre comun");
-                        ((Animales) animales.get(pos)).getnombrescientifico().add(nombrecomun);
+                        ((Animales) animales.get(pos)).getnombrecomun().add(nombrecomun);
                     }
                 } 
             }
+            if (opcion==4){
+               int pos = Integer.parseInt(
+                        JOptionPane.showInputDialog("posicion animales a agregar nombrescientifico"));
+                if (pos < animales.size()) {
+                    if (animales.get(pos) instanceof Animales) {
+                        String habitat = JOptionPane.showInputDialog("nombre comun");
+                        ((Animales) animales.get(pos)).gethabitat().add(habitat);
+                    }
+                } 
+            }
+            if (opcion==5){
+               int pos = Integer.parseInt(
+                        JOptionPane.showInputDialog("posicion animales a agregar nombrescientifico"));
+                if (pos < animales.size()) {
+                    if (animales.get(pos) instanceof Animales) {
+                        String alimentacion = JOptionPane.showInputDialog("nombre comun");
+                        ((Animales) animales.get(pos)).getalimentacion().add(alimentacion);
+                    }
+                } 
+            }
+            
+            
         }
 
     }
